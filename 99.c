@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 int main() {
+  char filename[100];
   FILE *fp;
   char ch;
   int vowel_count = 0;
   
-  printf("Enter name of text file:");
-  scanf("%s", filename);
-  fp = fopen("filename", "r");
+  fp = fopen("filename.txt", "r");
 
   if (fp == NULL) {
     printf("Error opening file.\n");
@@ -21,9 +20,10 @@ int main() {
     }
   }
 
-  fclose(fp);
+
 
   printf("Number of vowels in the file: %d\n", vowel_count);
+  fclose(fp);
 
   return 0;
 }
