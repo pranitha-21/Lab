@@ -4,8 +4,10 @@ int main() {
   FILE *fp;
   char ch;
   int vowel_count = 0;
-
-  fp = fopen("text.txt", "r");
+  
+  printf("Enter name of text file:");
+  scanf("%s", filename);
+  fp = fopen("filename", "r");
 
   if (fp == NULL) {
     printf("Error opening file.\n");
